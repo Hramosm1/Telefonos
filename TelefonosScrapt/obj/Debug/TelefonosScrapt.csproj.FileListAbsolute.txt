@@ -1,0 +1,10 @@
+C:\Users\ragonzalez\source\repos\TelefonosScrapt\TelefonosScrapt\bin\Debug\TelefonosScrapt.exe.config
+C:\Users\ragonzalez\source\repos\TelefonosScrapt\TelefonosScrapt\bin\Debug\TelefonosScrapt.exe
+C:\Users\ragonzalez\source\repos\TelefonosScrapt\TelefonosScrapt\bin\Debug\TelefonosScrapt.pdb
+C:\Users\ragonzalez\source\repos\TelefonosScrapt\TelefonosScrapt\obj\Debug\TelefonosScrapt.csproj.AssemblyReference.cache
+C:\Users\ragonzalez\source\repos\TelefonosScrapt\TelefonosScrapt\obj\Debug\TelefonosScrapt.FrmLogin.resources
+C:\Users\ragonzalez\source\repos\TelefonosScrapt\TelefonosScrapt\obj\Debug\TelefonosScrapt.Properties.Resources.resources
+C:\Users\ragonzalez\source\repos\TelefonosScrapt\TelefonosScrapt\obj\Debug\TelefonosScrapt.csproj.GenerateResource.cache
+C:\Users\ragonzalez\source\repos\TelefonosScrapt\TelefonosScrapt\obj\Debug\TelefonosScrapt.csproj.CoreCompileInputs.cache
+C:\Users\ragonzalez\source\repos\TelefonosScrapt\TelefonosScrapt\obj\Debug\TelefonosScrapt.exe
+C:\Users\ragonzalez\source\repos\TelefonosScrapt\TelefonosScrapt\obj\Debug\TelefonosScrapt.pdb
