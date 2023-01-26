@@ -22,14 +22,22 @@ namespace TelefonosScrapt.Formularios
         {
             btnCargar.Enabled = false;
             btnProcesar.Enabled = false;
+            btnCerrarSesion.Enabled = false;
 
 
             if (Funciones.fnImportarExcel.Importar("Datos", dgvData))
             {
                 btnCargar.Enabled = true;
                 btnProcesar.Enabled = true;
-                
+                btnCerrarSesion.Enabled = true;
             }
+            else
+            {
+                btnCargar.Enabled = true;
+                btnProcesar.Enabled = true;
+                btnCerrarSesion.Enabled = true;
+            }
+
 
         }
 
@@ -40,8 +48,24 @@ namespace TelefonosScrapt.Formularios
 
         private void btnProcesar_Click(object sender, EventArgs e)
         {
+            btnCargar.Enabled = false;
+            btnProcesar.Enabled = false;
+            btnCerrarSesion.Enabled = false;
+
             DataTable investigacion = (DataTable)dgvData.DataSource;
             Funciones.fnScrap.InvestigacionTelefonos(investigacion,dgvData);
+
+            btnCargar.Enabled = true;
+            btnProcesar.Enabled = true;
+            btnCerrarSesion.Enabled = true;
+
+        }
+
+        private void btnCerrarSesion_Click(object sender, EventArgs e)
+        {
+            FrmLogin frm = new FrmLogin();
+            frm.Show();
+            this.Hide();
 
         }
     }

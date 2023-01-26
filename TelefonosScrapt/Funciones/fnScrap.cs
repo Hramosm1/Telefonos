@@ -21,9 +21,9 @@ namespace TelefonosScrapt.Funciones
             DataTable resultados = Investigacion;
             int cont = -1;
 
-            if (resultados.Columns.Contains("compania") == false)
+            if (resultados.Columns.Contains("Compania") == false)
             {
-                resultados.Columns.Add("compania");
+                resultados.Columns.Add("Compania");
             }
 
             IWebDriver driver = new ChromeDriver();
@@ -69,7 +69,7 @@ namespace TelefonosScrapt.Funciones
                             TextoTelefono.SendKeys(numero);//Enviamos el numero a la caja de texto de numero
                             Boton.Submit();//Presiono el boton
                             var respuesta = driver.FindElement(By.XPath("/html/body/div[1]/article/div/div/div/form/div/div[2]/div/input")).GetAttribute("value"); //Obtengo la respuesta de la consulta
-                            resultados.Rows[cont]["compania"] = respuesta; //Ingreso la respuesta a la grid con la data
+                            resultados.Rows[cont]["Compania"] = respuesta; //Ingreso la respuesta a la grid con la data
 
                             if (respuesta != "")
                             {
@@ -94,7 +94,7 @@ namespace TelefonosScrapt.Funciones
                         else
                         {
                             var respuesta = dt.Rows[0]["Compania"].ToString();
-                            resultados.Rows[cont]["compania"] = respuesta;
+                            resultados.Rows[cont]["Compania"] = respuesta;
                         }
 
                     }
@@ -102,7 +102,7 @@ namespace TelefonosScrapt.Funciones
                 }
                 catch(Exception ex)
                 {
-                    resultados.Rows[cont]["compania"] = ex.Message;
+                    resultados.Rows[cont]["Compania"] = ex.Message;
                 }
                 
 

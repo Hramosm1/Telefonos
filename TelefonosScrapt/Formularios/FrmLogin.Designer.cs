@@ -142,6 +142,7 @@ namespace TelefonosScrapt
             this.txtContraseña.Name = "txtContraseña";
             this.txtContraseña.Size = new System.Drawing.Size(209, 21);
             this.txtContraseña.TabIndex = 10;
+            this.txtContraseña.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtContraseña_KeyPress);
             // 
             // txtUsuario
             // 
@@ -150,6 +151,7 @@ namespace TelefonosScrapt
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(209, 21);
             this.txtUsuario.TabIndex = 8;
+            this.txtUsuario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUsuario_KeyPress);
             // 
             // lblTexto
             // 

@@ -50,5 +50,56 @@ namespace TelefonosScrapt
             }
 
         }
+
+        private void txtUsuario_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((int)e.KeyChar == (int)Keys.Enter)
+            {
+
+                string Validar = Funciones.fnLogin.ValidacionUsuario(txtUsuario.Text, txtContraseña.Text);
+
+                if (Validar == "1")
+                {
+                    Formularios.FrmPantallaPrincipal frm = new Formularios.FrmPantallaPrincipal();
+                    frm.Show();
+                    this.Hide();
+                }
+                else if (Validar == "0")
+                {
+                    MessageBox.Show("Revise su usuario o contraseña", "Teléfonos", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+                else
+                {
+                    MessageBox.Show("Ha ocurrido un error", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+            }
+        }
+
+        private void txtContraseña_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((int)e.KeyChar == (int)Keys.Enter)
+            {
+
+                string Validar = Funciones.fnLogin.ValidacionUsuario(txtUsuario.Text, txtContraseña.Text);
+
+                if (Validar == "1")
+                {
+                    Formularios.FrmPantallaPrincipal frm = new Formularios.FrmPantallaPrincipal();
+                    frm.Show();
+                    this.Hide();
+                }
+                else if (Validar == "0")
+                {
+                    MessageBox.Show("Revise su usuario o contraseña", "Teléfonos", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+                else
+                {
+                    MessageBox.Show("Ha ocurrido un error", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+            }
+
+        }
     }
 }
