@@ -13,17 +13,24 @@ namespace TelefonosScrapt.Funciones
         
         public static String ValidacionUsuario(string usuario,string contraseña)
         {
-            string validacion = "0";
+            string validacion = "";
             try
             {
-                String[] Variables = { "@usuario", "@password" ,"@opcion"};
-                string[] Valores = { usuario, contraseña,"1"};
-
-                DataTable dt = Conexion.ConexionBaseDatos.Consulta("scrap_Telefonos", Variables, Valores);
-
-                if (dt.Rows.Count > 0)
+                if (usuario != "" & contraseña != "")
                 {
-                    validacion = dt.Rows[0]["Resultado"].ToString();
+                    String[] Variables = { "@usuario", "@password" };
+                    string[] Valores = { usuario, contraseña };
+
+                    DataTable dt = Conexion.ConexionBaseDatos.Consulta("sp_loginTelefonos", Variables, Valores);
+
+                    if (dt.Rows.Count > 0)
+                    {
+                        validacion = dt.Rows[0]["Resultado"].ToString();
+                    }
+                }
+                else
+                {
+                    validacion = "2";
                 }
 
             }

@@ -69,7 +69,16 @@ namespace TelefonosScrapt.Funciones
                             TextoTelefono.SendKeys(numero);//Enviamos el numero a la caja de texto de numero
                             Boton.Submit();//Presiono el boton
                             var respuesta = driver.FindElement(By.XPath("/html/body/div[1]/article/div/div/div/form/div/div[2]/div/input")).GetAttribute("value"); //Obtengo la respuesta de la consulta
-                            resultados.Rows[cont]["Compania"] = respuesta; //Ingreso la respuesta a la grid con la data
+                            
+                            if (respuesta == "")
+                            {
+                                resultados.Rows[cont]["Compania"] = "SIN RESULTADOS";
+                            }
+                            else
+                            {
+                                resultados.Rows[cont]["Compania"] = respuesta; //Ingreso la respuesta a la grid con la data
+                            }
+                            
 
                             if (respuesta != "")
                             {

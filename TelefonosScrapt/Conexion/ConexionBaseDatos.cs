@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.EntityClient;
+using System.Reflection;
+using System.Diagnostics;
 
 namespace TelefonosScrapt.Conexion
 {
@@ -15,7 +17,37 @@ namespace TelefonosScrapt.Conexion
 
         private static SqlConnection conectar() // Realizar la conexion a la base de datos
         {
-            SqlConnection cn = new SqlConnection("SERVER=192.168.8.8;DATABASE=InteligenciaDB_Fase2;USER=sicdesk;PASSWORD=dr8%25H#3%20;Integrated security=true");
+            string Server = ""
+                , Database = ""
+                , User = ""
+                , Password = "";
+
+#if DEBUG && !UAT
+
+            Server = "192.168.8.8";
+            Database = "Salud";
+            User = "investigacion";
+            Password = "vWCZ3UHg";
+
+#elif TRACE && !UAT
+
+            Server = "192.168.8.6";
+            Database = "Salud";
+            User = "investigacion";
+            Password = "vWCZ3UHg";
+
+#elif UAT 
+
+            Server = "192.168.8.27";
+            Database = "Salud";
+            User = "investigacion";
+            Password = "vWCZ3UHg";
+            
+#endif
+
+            string CadenaConexion = "SERVER=" + Server + ";DATABASE="+Database+";USER="+User+";PASSWORD="+Password+";Integrated security=true";
+
+            SqlConnection cn = new SqlConnection(CadenaConexion);
 
             return cn;
 

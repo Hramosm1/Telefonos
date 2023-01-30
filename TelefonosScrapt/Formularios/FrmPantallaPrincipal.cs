@@ -23,19 +23,21 @@ namespace TelefonosScrapt.Formularios
             btnCargar.Enabled = false;
             btnProcesar.Enabled = false;
             btnCerrarSesion.Enabled = false;
-
+            btnExportarExcel.Enabled = false;
 
             if (Funciones.fnImportarExcel.Importar("Datos", dgvData))
             {
                 btnCargar.Enabled = true;
                 btnProcesar.Enabled = true;
                 btnCerrarSesion.Enabled = true;
+                btnExportarExcel.Enabled = true;
             }
             else
             {
                 btnCargar.Enabled = true;
                 btnProcesar.Enabled = true;
                 btnCerrarSesion.Enabled = true;
+                btnExportarExcel.Enabled = true;
             }
 
 
@@ -51,6 +53,7 @@ namespace TelefonosScrapt.Formularios
             btnCargar.Enabled = false;
             btnProcesar.Enabled = false;
             btnCerrarSesion.Enabled = false;
+            btnExportarExcel.Enabled = false;
 
             DataTable investigacion = (DataTable)dgvData.DataSource;
             Funciones.fnScrap.InvestigacionTelefonos(investigacion,dgvData);
@@ -58,6 +61,7 @@ namespace TelefonosScrapt.Formularios
             btnCargar.Enabled = true;
             btnProcesar.Enabled = true;
             btnCerrarSesion.Enabled = true;
+            btnExportarExcel.Enabled = true;
 
         }
 
@@ -66,6 +70,19 @@ namespace TelefonosScrapt.Formularios
             FrmLogin frm = new FrmLogin();
             frm.Show();
             this.Hide();
+
+        }
+
+        private void btnExportarExcel_Click(object sender, EventArgs e)
+        {
+            if (dgvData.Columns.Count > 0)
+            {
+                if (dgvData.Columns.Contains("Compania"))
+                {
+                    Funciones.fnExportarExcel.Exportar(dgvData);
+                }
+
+            }
 
         }
     }

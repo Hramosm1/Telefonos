@@ -34,15 +34,19 @@ namespace TelefonosScrapt
         {
             string Validar = Funciones.fnLogin.ValidacionUsuario(txtUsuario.Text, txtContraseña.Text);
 
-            if(Validar == "1")
+            if (Validar == "1")
             {
                 Formularios.FrmPantallaPrincipal frm = new Formularios.FrmPantallaPrincipal();
                 frm.Show();
                 this.Hide();
             }
-            else if(Validar == "0")
+            else if (Validar == "0")
             {
                 MessageBox.Show("Revise su usuario o contraseña", "Teléfonos", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            else if (Validar == "2")
+            {
+                MessageBox.Show("Rellene todos los campos", "Teléfonos", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
             else
             {
