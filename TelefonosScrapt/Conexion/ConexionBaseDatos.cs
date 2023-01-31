@@ -45,7 +45,7 @@ namespace TelefonosScrapt.Conexion
             
 #endif
 
-            string CadenaConexion = "SERVER=" + Server + ";DATABASE="+Database+";USER="+User+";PASSWORD="+Password+";Integrated security=true";
+            string CadenaConexion = "SERVER=" + Server + ";DATABASE="+Database+";USER="+User+";PASSWORD="+Password+";Integrated security=false";
 
             SqlConnection cn = new SqlConnection(CadenaConexion);
 

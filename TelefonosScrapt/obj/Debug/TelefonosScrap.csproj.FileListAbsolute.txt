@@ -21,3 +21,4 @@ C:\Users\ragonzalez\source\repos\TelefonosScrapt\TelefonosScrapt\obj\Debug\Telef
 C:\Users\ragonzalez\source\repos\TelefonosScrapt\TelefonosScrapt\obj\Debug\Telefonos (DES).application
 C:\Users\ragonzalez\source\repos\TelefonosScrapt\TelefonosScrapt\obj\Debug\Telefonos (DES).exe
 C:\Users\ragonzalez\source\repos\TelefonosScrapt\TelefonosScrapt\obj\Debug\Telefonos (DES).pdb
+C:\Users\ragonzalez\source\repos\TelefonosScrapt\TelefonosScrapt\bin\Debug\chromedriver.exe

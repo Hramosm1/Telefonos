@@ -50,18 +50,26 @@ namespace TelefonosScrapt.Formularios
 
         private void btnProcesar_Click(object sender, EventArgs e)
         {
-            btnCargar.Enabled = false;
-            btnProcesar.Enabled = false;
-            btnCerrarSesion.Enabled = false;
-            btnExportarExcel.Enabled = false;
+            if(dgvData.Rows.Count > 0)
+            {
+                btnCargar.Enabled = false;
+                btnProcesar.Enabled = false;
+                btnCerrarSesion.Enabled = false;
+                btnExportarExcel.Enabled = false;
 
-            DataTable investigacion = (DataTable)dgvData.DataSource;
-            Funciones.fnScrap.InvestigacionTelefonos(investigacion,dgvData);
+                DataTable investigacion = (DataTable)dgvData.DataSource;
+                Funciones.fnScrap.InvestigacionTelefonos(investigacion, dgvData);
 
-            btnCargar.Enabled = true;
-            btnProcesar.Enabled = true;
-            btnCerrarSesion.Enabled = true;
-            btnExportarExcel.Enabled = true;
+                btnCargar.Enabled = true;
+                btnProcesar.Enabled = true;
+                btnCerrarSesion.Enabled = true;
+                btnExportarExcel.Enabled = true;
+            }
+            else
+            {
+                MessageBox.Show("Favor cargue un archivo", "Teléfonos", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+
 
         }
 

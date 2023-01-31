@@ -7,7 +7,7 @@
     <ProjectGuid>{9BB93E72-F5A2-4093-A8C0-B52C053F17FB}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>TelefonosScrapt</RootNamespace>
-    <AssemblyName>Telefonos %28DES%29</AssemblyName>
+    <AssemblyName>Teléfonos</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -15,19 +15,20 @@
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
     <IsWebBootstrapper>false</IsWebBootstrapper>
-    <PublishUrl>\\192.168.8.28\ftpSic\PublicacionTelefonosDes\</PublishUrl>
+    <PublishUrl>\\192.168.8.66\ftp\PublicacionTelefonos\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Unc</InstallFrom>
-    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateEnabled>true</UpdateEnabled>
     <UpdateMode>Foreground</UpdateMode>
     <UpdateInterval>7</UpdateInterval>
     <UpdateIntervalUnits>Days</UpdateIntervalUnits>
     <UpdatePeriodically>false</UpdatePeriodically>
-    <UpdateRequired>false</UpdateRequired>
+    <UpdateRequired>true</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ProductName>Telefonos</ProductName>
+    <ProductName>Teléfonos</ProductName>
     <PublisherName>SIADSA</PublisherName>
-    <ApplicationRevision>1</ApplicationRevision>
+    <MinimumRequiredVersion>1.0.0.0</MinimumRequiredVersion>
+    <ApplicationRevision>2</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -65,7 +66,7 @@
     <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>telefono.ico</ApplicationIcon>
+    <ApplicationIcon>telefonoProd.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
     <ManifestCertificateThumbprint>DE981A47E5219C76130D5799ED0A0AC1CA30AA2E</ManifestCertificateThumbprint>
@@ -255,6 +256,8 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="telefono.ico" />
+    <Content Include="telefonoProd.ico" />
+    <Content Include="telefonoUAT.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Selenium.WebDriver.4.8.0\build\Selenium.WebDriver.targets" Condition="Exists('..\packages\Selenium.WebDriver.4.8.0\build\Selenium.WebDriver.targets')" />
