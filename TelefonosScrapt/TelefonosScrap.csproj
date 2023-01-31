@@ -97,6 +97,7 @@
     </Compile>
     <Compile Include="Funciones\fnExportarExcel.cs" />
     <Compile Include="Funciones\fnImportarExcel.cs" />
+    <Compile Include="Funciones\fnLeerArchivos.cs" />
     <Compile Include="Funciones\fnLogin.cs" />
     <Compile Include="Funciones\fnScrap.cs" />
     <Compile Include="Program.cs" />

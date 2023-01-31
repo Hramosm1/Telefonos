@@ -86,7 +86,7 @@ namespace TelefonosScrapt.Funciones
         {
             bool flag = false;
             
-            String[] CamposObligatorios = { "Codigo", "IdEmpresa", "Numero" };
+            String[] CamposObligatorios = { "Codigo", "Empresa", "Numero" };
             String[] CamposTabla= new string[CamposObligatorios.Length];
             int n = dt.Columns.Count - CamposObligatorios.Length;
 

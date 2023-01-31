@@ -15,7 +15,7 @@ namespace TelefonosScrapt.Funciones
       
         public static void InvestigacionTelefonos(DataTable Investigacion, DataGridView grid)
         {
-            string idEmpresa,codigo,numero;
+            string Empresa,codigo,numero;
             DataTable dt = new DataTable();
             string[] Variables,Valores;
             DataTable resultados = Investigacion;
@@ -36,7 +36,7 @@ namespace TelefonosScrapt.Funciones
 
                 try
                 {
-                    idEmpresa = i["idEmpresa"].ToString();
+                    Empresa = i["Empresa"].ToString();
                     codigo = i["codigo"].ToString();
                     numero = i["numero"].ToString();
                     
@@ -91,8 +91,8 @@ namespace TelefonosScrapt.Funciones
                                 Valores[1] = numero;
                                 Variables[2] = "@noPrestamo";
                                 Valores[2] = codigo;
-                                Variables[3] = "@idEmpresa";
-                                Valores[3] = idEmpresa;
+                                Variables[3] = "@Empresa";
+                                Valores[3] = Empresa;
                                 Variables[4] = "@compania";
                                 Valores[4] = respuesta;
 

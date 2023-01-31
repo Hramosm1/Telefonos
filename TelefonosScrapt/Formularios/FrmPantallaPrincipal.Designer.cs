@@ -88,7 +88,7 @@ namespace TelefonosScrapt.Formularios
             // 
             // btnCargar
             // 
-            this.btnCargar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(160)))), ((int)(((byte)(199)))));
+            this.btnCargar.BackColor = System.Drawing.Color.Gray;
             this.btnCargar.FlatAppearance.BorderSize = 0;
             this.btnCargar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCargar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
