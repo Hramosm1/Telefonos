@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="Telefonos (DES).exe" version="1.0.0.0" publicKeyToken="894b33a09995217e" language="neutral" processorArchitecture="msil" type="win32" />
+  <description asmv2:iconFile="telefono.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="Telefonos (DES)" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <commandLine file="Telefonos (DES).exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!--
+          Opciones del manifiesto de Control de cuentas de usuario
+          Si quiere cambiar el nivel de Control de cuentas de usuario de Windows, reemplace el
+          nodo requestedExecutionLevel por alguno de los siguientes.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+         Si desea usar la virtualización de archivos y del Registro para la
+         compatibilidad con versiones anteriores, elimine el nodo requestedExecutionLevel.
+    -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Telefonos (DES).exe" size="101352">
+      <assemblyIdentity name="Telefonos (DES)" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>PXJB7o96gQSjkY7Ybw+ywRLtCgiC1gNsabiTyf5GTOk=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="WebDriver.dll" size="8962048">
+      <assemblyIdentity name="WebDriver" version="4.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>pBstDeQ2YMlEgR8Dd45XsU0xDl2CBXVATCgWfejmS5I=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="WebDriver.Support.dll" size="35328">
+      <assemblyIdentity name="WebDriver.Support" version="4.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>ALdZNgw3yzcPUeUbl61ZizBD0vOJJGX9+sUqn4nv+F8=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="telefono.ico" size="10012">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>GRrKTzQxlDWWDa1YThL6VbMYVuUYy6qyfibdhTJ3/ic=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Telefonos (DES).exe.config" size="189">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>R+Wg8QGvQVHX8T0ta/qbhH1bXkqY0fRnS3wBV3J0bN8=</dsig:DigestValue>
+    </hash>
+  </file>
+<publisherIdentity name="CN=CORPRECAGUA\ragonzalez" issuerKeyHash="fb7c017b01aecfe4f22c09e67ee8251b70c3e776" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>7LJaL7Wrzsu155Lx3cDQwOOEToKyaqS5EBJSao7aAEQ=</DigestValue></Reference></SignedInfo><SignatureValue>deggZpHtWuBcZrhoXhhfxCUTiA09lO2RkrSw/UtipYSvxqmovizDO9G6UqrtB+kd7ImIbVVdCA0Arm/GWdFvqiLK5ZjFsQu0IAcZvt3EhlDyqTo0UmzyCKabHyDQiBjAum73HJNMeClNSQUjcjCBGIF6d7M2UG6UQnKUjMJ0wMQ=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>vLD5auIjyCZvGCdGwE1ft9aI0i/+FseoTZuI3TWyb3YAKwf5XG5aRK0n9Wnb0xkkyIdXUVeKaW6QgfGhgWipenF4HInObS0JZB/yH61M6x0sck5E0ND0hVlGh2PlpJy6kYfMsx1JsJOx4GBWga/2xtjELBsxtxZqDqhlOt25dLk=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="4400da8e6a521210b9a46ab2824e84e3c0d0c0ddf192e7b5cbceabb52f5ab2ec" Description="" Url=""><as:assemblyIdentity name="Telefonos (DES).exe" version="1.0.0.0" publicKeyToken="894b33a09995217e" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=CORPRECAGUA\ragonzalez</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>+Dwz8M4qG4sSNfX1wHzXgr7kfHIWKkE2xcMsX7mo+IA=</DigestValue></Reference></SignedInfo><SignatureValue>J01NmiaiwzE4bH7m4a0+Bq/FFkbdgqUqk16F3CGpA8xxfal8FalopJGHq0MsVwcqxUl3PzVKgN12op6FBJo5GYbVVlUL/2yrOCwpA+IFdoossbJlHGddq+oMMSRtxojdib9rD9ZXOwl84MjaOu4NVfIicqeNIV0SwLPYxPT2XHw=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>vLD5auIjyCZvGCdGwE1ft9aI0i/+FseoTZuI3TWyb3YAKwf5XG5aRK0n9Wnb0xkkyIdXUVeKaW6QgfGhgWipenF4HInObS0JZB/yH61M6x0sck5E0ND0hVlGh2PlpJy6kYfMsx1JsJOx4GBWga/2xtjELBsxtxZqDqhlOt25dLk=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIB8TCCAVqgAwIBAgIQUubRVPaelqdCJt1nMh2iGjANBgkqhkiG9w0BAQsFADA3MTUwMwYDVQQDHiwAQwBPAFIAUABSAEUAQwBBAEcAVQBBAFwAcgBhAGcAbwBuAHoAYQBsAGUAejAeFw0yMzAxMzExNjM2MzlaFw0yNDAxMzEyMjM2MzlaMDcxNTAzBgNVBAMeLABDAE8AUgBQAFIARQBDAEEARwBVAEEAXAByAGEAZwBvAG4AegBhAGwAZQB6MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQC8sPlq4iPIJm8YJ0bATV+31ojSL/4Wx6hNm4jdNbJvdgArB/lcblpErSf1advTGSTIh1dRV4ppbpCB8aGBaKl6cXgcic5tLQlkH/IfrUzrHSxyTkTQ0PSFWUaHY+WknLqRh8yzHUmwk7HgYFaBr/bG2MQsGzG3FmoOqGU63bl0uQIDAQABMA0GCSqGSIb3DQEBCwUAA4GBABkQpuIf+bkQECmHsm20qkbQIAdWFsQ3kD4IURGT8ZwABV5YKj9XnwoD9ardVJ5IARzqtLRlwDAlB4z8sV1YyBEMyeL64qBxkk8jAWT+6F/+HuYVRo85tCwn0ZpbE9Aysibb9zKNGcnuQd0jEmkpKAxmt7cPA9WEFGgu0Fm4rbLO</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>
