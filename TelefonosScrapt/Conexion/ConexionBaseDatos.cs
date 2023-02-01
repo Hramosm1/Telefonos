@@ -56,32 +56,25 @@ namespace TelefonosScrapt.Conexion
         public static DataTable Consulta(String sp, String[] Variables, String[] Valores) //Realizamos la ejecucion de un procedimiento almacenado
         {
             DataTable Consulta = new DataTable();
-            try
+
+            conectar().Open();
+
+            SqlCommand comando = conectar().CreateCommand();
+            comando.CommandTimeout = 0;
+            comando.CommandText = sp;
+            comando.CommandType = CommandType.StoredProcedure;
+
+            int cont = -1;
+            foreach (string i in Variables)
             {
-                
-                conectar().Open();
-
-                SqlCommand comando = conectar().CreateCommand();
-                comando.CommandTimeout = 0;
-                comando.CommandText = sp;
-                comando.CommandType = CommandType.StoredProcedure;
-
-                int cont = -1;
-                foreach (string i in Variables)
-                {
                     cont += 1;
                     comando.Parameters.AddWithValue(i, Valores[cont]);
-                }
-
-                SqlDataAdapter datos = new SqlDataAdapter(comando);
-                datos.Fill(Consulta);
-
-                conectar().Close();
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error de conexión, comuniquese con soporte "+ ex.Message,"Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
-            }
+
+            SqlDataAdapter datos = new SqlDataAdapter(comando);
+            datos.Fill(Consulta);
+
+            conectar().Close();
 
             return Consulta;
 

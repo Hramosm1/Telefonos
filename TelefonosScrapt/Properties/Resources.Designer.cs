@@ -93,6 +93,16 @@ namespace TelefonosScrapt.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap bloquearC {
+            get {
+                object obj = ResourceManager.GetObject("bloquearC", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap boton_cerrar {
             get {
                 object obj = ResourceManager.GetObject("boton-cerrar", resourceCulture);
@@ -226,6 +236,16 @@ namespace TelefonosScrapt.Properties {
         internal static System.Drawing.Bitmap usuario__1_ {
             get {
                 object obj = ResourceManager.GetObject("usuario (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap usuarioC {
+            get {
+                object obj = ResourceManager.GetObject("usuarioC", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

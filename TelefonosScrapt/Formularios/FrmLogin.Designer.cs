@@ -31,16 +31,16 @@ namespace TelefonosScrapt
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmLogin));
             this.pnSuperior = new System.Windows.Forms.Panel();
-            this.btnCerrar = new System.Windows.Forms.Button();
             this.pnIcono = new System.Windows.Forms.Panel();
             this.pnDatosLogin = new System.Windows.Forms.Panel();
-            this.pictContraseña = new System.Windows.Forms.PictureBox();
-            this.pictUsuario = new System.Windows.Forms.PictureBox();
             this.btnInicio = new System.Windows.Forms.Button();
             this.txtContraseña = new System.Windows.Forms.TextBox();
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.lblTexto = new System.Windows.Forms.Label();
+            this.pictContraseña = new System.Windows.Forms.PictureBox();
+            this.pictUsuario = new System.Windows.Forms.PictureBox();
             this.pictIcono = new System.Windows.Forms.PictureBox();
+            this.btnCerrar = new System.Windows.Forms.Button();
             this.pnSuperior.SuspendLayout();
             this.pnIcono.SuspendLayout();
             this.pnDatosLogin.SuspendLayout();
@@ -58,19 +58,6 @@ namespace TelefonosScrapt
             this.pnSuperior.Name = "pnSuperior";
             this.pnSuperior.Size = new System.Drawing.Size(337, 33);
             this.pnSuperior.TabIndex = 0;
-            // 
-            // btnCerrar
-            // 
-            this.btnCerrar.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.btnCerrar.BackgroundImage = global::TelefonosScrapt.Properties.Resources.xBlancaP;
-            this.btnCerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCerrar.Location = new System.Drawing.Point(307, 7);
-            this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(27, 23);
-            this.btnCerrar.TabIndex = 0;
-            this.btnCerrar.UseVisualStyleBackColor = false;
-            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
             // pnIcono
             // 
@@ -98,35 +85,14 @@ namespace TelefonosScrapt
             this.pnDatosLogin.Size = new System.Drawing.Size(337, 216);
             this.pnDatosLogin.TabIndex = 2;
             // 
-            // pictContraseña
-            // 
-            this.pictContraseña.BackgroundImage = global::TelefonosScrapt.Properties.Resources.bloquear1;
-            this.pictContraseña.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictContraseña.ErrorImage = null;
-            this.pictContraseña.Location = new System.Drawing.Point(47, 84);
-            this.pictContraseña.Name = "pictContraseña";
-            this.pictContraseña.Size = new System.Drawing.Size(29, 31);
-            this.pictContraseña.TabIndex = 13;
-            this.pictContraseña.TabStop = false;
-            // 
-            // pictUsuario
-            // 
-            this.pictUsuario.BackgroundImage = global::TelefonosScrapt.Properties.Resources.usuario__1_;
-            this.pictUsuario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictUsuario.Location = new System.Drawing.Point(47, 46);
-            this.pictUsuario.Name = "pictUsuario";
-            this.pictUsuario.Size = new System.Drawing.Size(29, 31);
-            this.pictUsuario.TabIndex = 12;
-            this.pictUsuario.TabStop = false;
-            // 
             // btnInicio
             // 
             this.btnInicio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(160)))), ((int)(((byte)(199)))));
             this.btnInicio.FlatAppearance.BorderSize = 0;
             this.btnInicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnInicio.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInicio.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInicio.ForeColor = System.Drawing.Color.White;
-            this.btnInicio.Location = new System.Drawing.Point(47, 135);
+            this.btnInicio.Location = new System.Drawing.Point(47, 122);
             this.btnInicio.Name = "btnInicio";
             this.btnInicio.Size = new System.Drawing.Size(244, 39);
             this.btnInicio.TabIndex = 11;
@@ -147,7 +113,7 @@ namespace TelefonosScrapt
             // txtUsuario
             // 
             this.txtUsuario.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsuario.Location = new System.Drawing.Point(82, 57);
+            this.txtUsuario.Location = new System.Drawing.Point(82, 56);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(209, 21);
             this.txtUsuario.TabIndex = 8;
@@ -163,6 +129,27 @@ namespace TelefonosScrapt
             this.lblTexto.TabIndex = 1;
             this.lblTexto.Text = "Teléfonos Guatemala";
             // 
+            // pictContraseña
+            // 
+            this.pictContraseña.BackgroundImage = global::TelefonosScrapt.Properties.Resources.bloquearC;
+            this.pictContraseña.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictContraseña.ErrorImage = null;
+            this.pictContraseña.Location = new System.Drawing.Point(47, 83);
+            this.pictContraseña.Name = "pictContraseña";
+            this.pictContraseña.Size = new System.Drawing.Size(29, 31);
+            this.pictContraseña.TabIndex = 13;
+            this.pictContraseña.TabStop = false;
+            // 
+            // pictUsuario
+            // 
+            this.pictUsuario.BackgroundImage = global::TelefonosScrapt.Properties.Resources.usuarioC;
+            this.pictUsuario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictUsuario.Location = new System.Drawing.Point(47, 46);
+            this.pictUsuario.Name = "pictUsuario";
+            this.pictUsuario.Size = new System.Drawing.Size(29, 31);
+            this.pictUsuario.TabIndex = 12;
+            this.pictUsuario.TabStop = false;
+            // 
             // pictIcono
             // 
             this.pictIcono.BackgroundImage = global::TelefonosScrapt.Properties.Resources.llamada_telefonica__5_;
@@ -172,6 +159,19 @@ namespace TelefonosScrapt
             this.pictIcono.Size = new System.Drawing.Size(76, 83);
             this.pictIcono.TabIndex = 0;
             this.pictIcono.TabStop = false;
+            // 
+            // btnCerrar
+            // 
+            this.btnCerrar.BackColor = System.Drawing.SystemColors.ControlText;
+            this.btnCerrar.BackgroundImage = global::TelefonosScrapt.Properties.Resources.boton_cerrar;
+            this.btnCerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCerrar.Location = new System.Drawing.Point(307, 7);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Size = new System.Drawing.Size(27, 23);
+            this.btnCerrar.TabIndex = 0;
+            this.btnCerrar.UseVisualStyleBackColor = false;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
             // FrmLogin
             // 

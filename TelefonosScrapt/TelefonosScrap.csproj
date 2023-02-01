@@ -28,7 +28,7 @@
     <ProductName>Teléfonos</ProductName>
     <PublisherName>SIADSA</PublisherName>
     <MinimumRequiredVersion>1.0.0.0</MinimumRequiredVersion>
-    <ApplicationRevision>2</ApplicationRevision>
+    <ApplicationRevision>3</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -255,6 +255,8 @@
     <Content Include="chromedriver.exe">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <None Include="Resources\usuarioC.png" />
+    <None Include="Resources\bloquearC.png" />
     <Content Include="telefono.ico" />
     <Content Include="telefonoProd.ico" />
     <Content Include="telefonoUAT.ico" />

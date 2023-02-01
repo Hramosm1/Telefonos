@@ -44,6 +44,7 @@ namespace TelefonosScrapt.Formularios
             this.dgvData = new System.Windows.Forms.DataGridView();
             this.lblTexto = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pbInvestigacion = new System.Windows.Forms.ProgressBar();
             this.pnSuperior.SuspendLayout();
             this.pnMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvData)).BeginInit();
@@ -52,6 +53,7 @@ namespace TelefonosScrapt.Formularios
             // pnSuperior
             // 
             this.pnSuperior.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.pnSuperior.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnSuperior.Controls.Add(this.btnCerrar);
             this.pnSuperior.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnSuperior.ForeColor = System.Drawing.SystemColors.GrayText;
@@ -83,7 +85,7 @@ namespace TelefonosScrapt.Formularios
             this.pnMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnMenu.Location = new System.Drawing.Point(0, 33);
             this.pnMenu.Name = "pnMenu";
-            this.pnMenu.Size = new System.Drawing.Size(178, 413);
+            this.pnMenu.Size = new System.Drawing.Size(175, 413);
             this.pnMenu.TabIndex = 2;
             // 
             // btnCargar
@@ -186,7 +188,7 @@ namespace TelefonosScrapt.Formularios
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvData.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvData.EnableHeadersVisualStyles = false;
-            this.dgvData.Location = new System.Drawing.Point(184, 59);
+            this.dgvData.Location = new System.Drawing.Point(189, 59);
             this.dgvData.Name = "dgvData";
             this.dgvData.ReadOnly = true;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -198,14 +200,14 @@ namespace TelefonosScrapt.Formularios
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvData.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvData.RowHeadersVisible = false;
-            this.dgvData.Size = new System.Drawing.Size(813, 381);
+            this.dgvData.Size = new System.Drawing.Size(799, 352);
             this.dgvData.TabIndex = 3;
             // 
             // lblTexto
             // 
             this.lblTexto.AutoSize = true;
             this.lblTexto.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTexto.Location = new System.Drawing.Point(180, 33);
+            this.lblTexto.Location = new System.Drawing.Point(185, 33);
             this.lblTexto.Name = "lblTexto";
             this.lblTexto.Size = new System.Drawing.Size(135, 23);
             this.lblTexto.TabIndex = 4;
@@ -214,11 +216,19 @@ namespace TelefonosScrapt.Formularios
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.Location = new System.Drawing.Point(0, 446);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1000, 33);
             this.panel1.TabIndex = 5;
+            // 
+            // pbInvestigacion
+            // 
+            this.pbInvestigacion.Location = new System.Drawing.Point(189, 417);
+            this.pbInvestigacion.Name = "pbInvestigacion";
+            this.pbInvestigacion.Size = new System.Drawing.Size(799, 23);
+            this.pbInvestigacion.TabIndex = 6;
             // 
             // FrmPantallaPrincipal
             // 
@@ -226,6 +236,7 @@ namespace TelefonosScrapt.Formularios
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1000, 479);
+            this.Controls.Add(this.pbInvestigacion);
             this.Controls.Add(this.lblTexto);
             this.Controls.Add(this.dgvData);
             this.Controls.Add(this.pnMenu);
@@ -256,5 +267,6 @@ namespace TelefonosScrapt.Formularios
         private System.Windows.Forms.Button btnCerrarSesion;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnExportarExcel;
+        private System.Windows.Forms.ProgressBar pbInvestigacion;
     }
 }

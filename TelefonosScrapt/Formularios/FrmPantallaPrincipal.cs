@@ -50,25 +50,40 @@ namespace TelefonosScrapt.Formularios
 
         private void btnProcesar_Click(object sender, EventArgs e)
         {
-            if(dgvData.Rows.Count > 0)
+            try
             {
-                btnCargar.Enabled = false;
-                btnProcesar.Enabled = false;
-                btnCerrarSesion.Enabled = false;
-                btnExportarExcel.Enabled = false;
+                if (dgvData.Rows.Count > 0)
+                {
+                    btnCargar.Enabled = false;
+                    btnProcesar.Enabled = false;
+                    btnCerrarSesion.Enabled = false;
+                    btnExportarExcel.Enabled = false;
 
-                DataTable investigacion = (DataTable)dgvData.DataSource;
-                Funciones.fnScrap.InvestigacionTelefonos(investigacion, dgvData);
+                    DataTable investigacion = (DataTable)dgvData.DataSource;
+                    Funciones.fnScrap.InvestigacionTelefonos(investigacion, dgvData,pbInvestigacion);
 
+                    btnCargar.Enabled = true;
+                    btnProcesar.Enabled = true;
+                    btnCerrarSesion.Enabled = true;
+                    btnExportarExcel.Enabled = true;
+                }
+                else
+                {
+                    MessageBox.Show("Favor cargue un archivo", "Teléfonos", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Ha ocurrido un error: " + ex.Message, "Teléfonos", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 btnCargar.Enabled = true;
                 btnProcesar.Enabled = true;
                 btnCerrarSesion.Enabled = true;
                 btnExportarExcel.Enabled = true;
+                pbInvestigacion.Value = 0;
             }
-            else
-            {
-                MessageBox.Show("Favor cargue un archivo", "Teléfonos", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
+
+
 
 
         }
