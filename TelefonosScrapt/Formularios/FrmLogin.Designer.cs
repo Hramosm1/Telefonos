@@ -30,34 +30,21 @@ namespace TelefonosScrapt
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmLogin));
-            this.pnSuperior = new System.Windows.Forms.Panel();
             this.pnIcono = new System.Windows.Forms.Panel();
             this.pnDatosLogin = new System.Windows.Forms.Panel();
+            this.pictContraseña = new System.Windows.Forms.PictureBox();
+            this.pictUsuario = new System.Windows.Forms.PictureBox();
             this.btnInicio = new System.Windows.Forms.Button();
             this.txtContraseña = new System.Windows.Forms.TextBox();
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.lblTexto = new System.Windows.Forms.Label();
-            this.pictContraseña = new System.Windows.Forms.PictureBox();
-            this.pictUsuario = new System.Windows.Forms.PictureBox();
             this.pictIcono = new System.Windows.Forms.PictureBox();
-            this.btnCerrar = new System.Windows.Forms.Button();
-            this.pnSuperior.SuspendLayout();
             this.pnIcono.SuspendLayout();
             this.pnDatosLogin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictContraseña)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictUsuario)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictIcono)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pnSuperior
-            // 
-            this.pnSuperior.BackColor = System.Drawing.SystemColors.ControlText;
-            this.pnSuperior.Controls.Add(this.btnCerrar);
-            this.pnSuperior.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnSuperior.Location = new System.Drawing.Point(0, 0);
-            this.pnSuperior.Name = "pnSuperior";
-            this.pnSuperior.Size = new System.Drawing.Size(337, 33);
-            this.pnSuperior.TabIndex = 0;
             // 
             // pnIcono
             // 
@@ -66,9 +53,9 @@ namespace TelefonosScrapt
             this.pnIcono.Controls.Add(this.lblTexto);
             this.pnIcono.Controls.Add(this.pictIcono);
             this.pnIcono.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnIcono.Location = new System.Drawing.Point(0, 33);
+            this.pnIcono.Location = new System.Drawing.Point(0, 0);
             this.pnIcono.Name = "pnIcono";
-            this.pnIcono.Size = new System.Drawing.Size(337, 378);
+            this.pnIcono.Size = new System.Drawing.Size(337, 411);
             this.pnIcono.TabIndex = 2;
             // 
             // pnDatosLogin
@@ -80,10 +67,31 @@ namespace TelefonosScrapt
             this.pnDatosLogin.Controls.Add(this.txtContraseña);
             this.pnDatosLogin.Controls.Add(this.txtUsuario);
             this.pnDatosLogin.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnDatosLogin.Location = new System.Drawing.Point(0, 162);
+            this.pnDatosLogin.Location = new System.Drawing.Point(0, 159);
             this.pnDatosLogin.Name = "pnDatosLogin";
-            this.pnDatosLogin.Size = new System.Drawing.Size(337, 216);
+            this.pnDatosLogin.Size = new System.Drawing.Size(337, 252);
             this.pnDatosLogin.TabIndex = 2;
+            // 
+            // pictContraseña
+            // 
+            this.pictContraseña.BackgroundImage = global::TelefonosScrapt.Properties.Resources.bloquearC;
+            this.pictContraseña.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictContraseña.ErrorImage = null;
+            this.pictContraseña.Location = new System.Drawing.Point(46, 102);
+            this.pictContraseña.Name = "pictContraseña";
+            this.pictContraseña.Size = new System.Drawing.Size(29, 31);
+            this.pictContraseña.TabIndex = 13;
+            this.pictContraseña.TabStop = false;
+            // 
+            // pictUsuario
+            // 
+            this.pictUsuario.BackgroundImage = global::TelefonosScrapt.Properties.Resources.usuarioC;
+            this.pictUsuario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictUsuario.Location = new System.Drawing.Point(46, 65);
+            this.pictUsuario.Name = "pictUsuario";
+            this.pictUsuario.Size = new System.Drawing.Size(29, 31);
+            this.pictUsuario.TabIndex = 12;
+            this.pictUsuario.TabStop = false;
             // 
             // btnInicio
             // 
@@ -92,7 +100,7 @@ namespace TelefonosScrapt
             this.btnInicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnInicio.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInicio.ForeColor = System.Drawing.Color.White;
-            this.btnInicio.Location = new System.Drawing.Point(47, 122);
+            this.btnInicio.Location = new System.Drawing.Point(46, 141);
             this.btnInicio.Name = "btnInicio";
             this.btnInicio.Size = new System.Drawing.Size(244, 39);
             this.btnInicio.TabIndex = 11;
@@ -104,7 +112,7 @@ namespace TelefonosScrapt
             // 
             this.txtContraseña.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtContraseña.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtContraseña.Location = new System.Drawing.Point(82, 95);
+            this.txtContraseña.Location = new System.Drawing.Point(81, 114);
             this.txtContraseña.Name = "txtContraseña";
             this.txtContraseña.Size = new System.Drawing.Size(209, 21);
             this.txtContraseña.TabIndex = 10;
@@ -113,7 +121,7 @@ namespace TelefonosScrapt
             // txtUsuario
             // 
             this.txtUsuario.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsuario.Location = new System.Drawing.Point(82, 56);
+            this.txtUsuario.Location = new System.Drawing.Point(81, 75);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(209, 21);
             this.txtUsuario.TabIndex = 8;
@@ -129,27 +137,6 @@ namespace TelefonosScrapt
             this.lblTexto.TabIndex = 1;
             this.lblTexto.Text = "Teléfonos Guatemala";
             // 
-            // pictContraseña
-            // 
-            this.pictContraseña.BackgroundImage = global::TelefonosScrapt.Properties.Resources.bloquearC;
-            this.pictContraseña.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictContraseña.ErrorImage = null;
-            this.pictContraseña.Location = new System.Drawing.Point(47, 83);
-            this.pictContraseña.Name = "pictContraseña";
-            this.pictContraseña.Size = new System.Drawing.Size(29, 31);
-            this.pictContraseña.TabIndex = 13;
-            this.pictContraseña.TabStop = false;
-            // 
-            // pictUsuario
-            // 
-            this.pictUsuario.BackgroundImage = global::TelefonosScrapt.Properties.Resources.usuarioC;
-            this.pictUsuario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictUsuario.Location = new System.Drawing.Point(47, 46);
-            this.pictUsuario.Name = "pictUsuario";
-            this.pictUsuario.Size = new System.Drawing.Size(29, 31);
-            this.pictUsuario.TabIndex = 12;
-            this.pictUsuario.TabStop = false;
-            // 
             // pictIcono
             // 
             this.pictIcono.BackgroundImage = global::TelefonosScrapt.Properties.Resources.llamada_telefonica__5_;
@@ -160,33 +147,21 @@ namespace TelefonosScrapt
             this.pictIcono.TabIndex = 0;
             this.pictIcono.TabStop = false;
             // 
-            // btnCerrar
-            // 
-            this.btnCerrar.BackColor = System.Drawing.SystemColors.ControlText;
-            this.btnCerrar.BackgroundImage = global::TelefonosScrapt.Properties.Resources.boton_cerrar;
-            this.btnCerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCerrar.Location = new System.Drawing.Point(307, 7);
-            this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(27, 23);
-            this.btnCerrar.TabIndex = 0;
-            this.btnCerrar.UseVisualStyleBackColor = false;
-            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
-            // 
             // FrmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(337, 411);
             this.Controls.Add(this.pnIcono);
-            this.Controls.Add(this.pnSuperior);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FrmLogin";
+            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Bienvenido!";
             this.Load += new System.EventHandler(this.FrmLogin_Load);
-            this.pnSuperior.ResumeLayout(false);
             this.pnIcono.ResumeLayout(false);
             this.pnIcono.PerformLayout();
             this.pnDatosLogin.ResumeLayout(false);
@@ -199,10 +174,7 @@ namespace TelefonosScrapt
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel pnSuperior;
         private System.Windows.Forms.Panel pnIcono;
-        private System.Windows.Forms.Button btnCerrar;
         private System.Windows.Forms.PictureBox pictIcono;
         private System.Windows.Forms.Label lblTexto;
         private System.Windows.Forms.Panel pnDatosLogin;

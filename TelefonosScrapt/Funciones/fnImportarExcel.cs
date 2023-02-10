@@ -21,9 +21,9 @@ namespace TelefonosScrapt.Funciones
 
         }
 
-        public static bool Importar(string nombreHoja, DataGridView grid) //Importar el excel a una data table
+        public static string Importar(string nombreHoja, DataGridView grid) //Importar el excel a una data table
         {
-            bool flag = false;
+            string flag = "";
             DataTable dt = new DataTable();
             string ruta = "";
             OleDbConnection conexion;
@@ -35,7 +35,7 @@ namespace TelefonosScrapt.Funciones
                 OpenFileDialog Explorador = new OpenFileDialog();
                 Explorador.Filter = "Excel files |*.xlsx";
                 Explorador.Title = "Seleccionar archivo";
-                if (Explorador.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                if (Explorador.ShowDialog() == DialogResult.OK)
                 {
                     ruta = Explorador.FileName;
                 }
@@ -58,7 +58,7 @@ namespace TelefonosScrapt.Funciones
                         if (ValidarColumnas(dt))
                         {
                             MessageBox.Show("Archivo cargado correctamente.", "Teléfonos", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            flag = true;
+                            flag = ruta;
                             grid.DataSource = dt;
                         }
                         else

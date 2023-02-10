@@ -37,6 +37,7 @@ namespace TelefonosScrapt
             if (Validar == "1")
             {
                 Formularios.FrmPantallaPrincipal frm = new Formularios.FrmPantallaPrincipal();
+                frm.usuarioIngreso = txtUsuario.Text;
                 frm.Show();
                 this.Hide();
             }
@@ -65,6 +66,7 @@ namespace TelefonosScrapt
                 if (Validar == "1")
                 {
                     Formularios.FrmPantallaPrincipal frm = new Formularios.FrmPantallaPrincipal();
+                    frm.usuarioIngreso = txtUsuario.Text;
                     frm.Show();
                     this.Hide();
                 }
@@ -90,6 +92,7 @@ namespace TelefonosScrapt
                 if (Validar == "1")
                 {
                     Formularios.FrmPantallaPrincipal frm = new Formularios.FrmPantallaPrincipal();
+                    frm.usuarioIngreso = txtUsuario.Text;
                     frm.Show();
                     this.Hide();
                 }

@@ -28,7 +28,7 @@
     <ProductName>Teléfonos</ProductName>
     <PublisherName>SIADSA</PublisherName>
     <MinimumRequiredVersion>1.0.0.0</MinimumRequiredVersion>
-    <ApplicationRevision>3</ApplicationRevision>
+    <ApplicationRevision>5</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -114,10 +114,17 @@
     <Compile Include="Formularios\FrmPantallaPrincipal.Designer.cs">
       <DependentUpon>FrmPantallaPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\FrmSeleccionProcesarArchivo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmSeleccionProcesarArchivo.Designer.cs">
+      <DependentUpon>FrmSeleccionProcesarArchivo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Funciones\fnConvertirDatagrid.cs" />
     <Compile Include="Funciones\fnExportarExcel.cs" />
     <Compile Include="Funciones\fnImportarExcel.cs" />
-    <Compile Include="Funciones\fnLeerArchivos.cs" />
     <Compile Include="Funciones\fnLogin.cs" />
+    <Compile Include="Funciones\fnOrigenDatos.cs" />
     <Compile Include="Funciones\fnScrap.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -126,6 +133,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FrmPantallaPrincipal.resx">
       <DependentUpon>FrmPantallaPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmSeleccionProcesarArchivo.resx">
+      <DependentUpon>FrmSeleccionProcesarArchivo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -257,6 +267,7 @@
     </Content>
     <None Include="Resources\usuarioC.png" />
     <None Include="Resources\bloquearC.png" />
+    <None Include="Resources\configuraciones_1.png" />
     <Content Include="telefono.ico" />
     <Content Include="telefonoProd.ico" />
     <Content Include="telefonoUAT.ico" />

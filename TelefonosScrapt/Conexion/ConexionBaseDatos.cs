@@ -15,12 +15,13 @@ namespace TelefonosScrapt.Conexion
     class ConexionBaseDatos
     {
 
-        private static SqlConnection conectar() // Realizar la conexion a la base de datos
+        private static SqlConnection conectar() // Realizar la cadena de conexion a la base de datos
         {
             string Server = ""
                 , Database = ""
                 , User = ""
-                , Password = "";
+                , Password = ""
+                , Security = "";
 
 #if DEBUG && !UAT
 
@@ -28,6 +29,7 @@ namespace TelefonosScrapt.Conexion
             Database = "Salud";
             User = "investigacion";
             Password = "vWCZ3UHg";
+            Security = "true";
 
 #elif TRACE && !UAT
 
@@ -35,6 +37,7 @@ namespace TelefonosScrapt.Conexion
             Database = "Salud";
             User = "investigacion";
             Password = "vWCZ3UHg";
+            Security = "false";
 
 #elif UAT 
 
@@ -42,10 +45,11 @@ namespace TelefonosScrapt.Conexion
             Database = "Salud";
             User = "investigacion";
             Password = "vWCZ3UHg";
+            Security = "true";
             
 #endif
 
-            string CadenaConexion = "SERVER=" + Server + ";DATABASE="+Database+";USER="+User+";PASSWORD="+Password+";Integrated security=false";
+            string CadenaConexion = "SERVER=" + Server + ";DATABASE="+Database+";USER="+User+";PASSWORD="+Password+";Integrated security=" +Security;
 
             SqlConnection cn = new SqlConnection(CadenaConexion);
 
@@ -56,30 +60,31 @@ namespace TelefonosScrapt.Conexion
         public static DataTable Consulta(String sp, String[] Variables, String[] Valores) //Realizamos la ejecucion de un procedimiento almacenado
         {
             DataTable Consulta = new DataTable();
+            SqlConnection conexion = conectar();
+            conexion.Open();
 
-            conectar().Open();
-
-            SqlCommand comando = conectar().CreateCommand();
+            SqlCommand comando = conexion.CreateCommand();
             comando.CommandTimeout = 0;
             comando.CommandText = sp;
             comando.CommandType = CommandType.StoredProcedure;
 
             int cont = -1;
             foreach (string i in Variables)
-            {
-                    cont += 1;
-                    comando.Parameters.AddWithValue(i, Valores[cont]);
+            {   
+                cont += 1;
+                comando.Parameters.AddWithValue(i, Valores[cont]);
             }
 
             SqlDataAdapter datos = new SqlDataAdapter(comando);
             datos.Fill(Consulta);
 
-            conectar().Close();
+            conexion.Close();
 
             return Consulta;
 
 
         }
+
 
 
     }

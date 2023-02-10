@@ -13,7 +13,7 @@ namespace TelefonosScrapt.Funciones
     class fnScrap
     {
       
-        public static void InvestigacionTelefonos(DataTable Investigacion, DataGridView grid,ProgressBar bar)
+        public static void InvestigacionTelefonos(DataTable Investigacion, DataGridView grid,ProgressBar bar, string ruta, string usuario)
         {
             string Empresa,codigo,numero;
             DataTable dt = new DataTable();
@@ -29,9 +29,23 @@ namespace TelefonosScrapt.Funciones
             bar.Value = 0;
             bar.Maximum = Investigacion.Rows.Count;
 
-            IWebDriver driver = new ChromeDriver();
+            // Opcion para deshabilitar las extensiones, notificaciones, cache y que no se muestre el navegador
+
+            ChromeOptions options = new ChromeOptions();
+
+            options.AddArgument("no-sandbox");
+            options.AddArguments("--disable-extensions");
+            options.AddArguments("--disable-notifications");
+            options.AddArguments("--disable-application-cache");
+            options.AddArgument("--headless");
+
+            ChromeDriverService service = ChromeDriverService.CreateDefaultService();
+            service.HideCommandPromptWindow = false;
+
+            IWebDriver driver = new ChromeDriver(service, options, TimeSpan.FromMinutes(5));
             driver.Navigate().GoToUrl("https://www.telefonosguatemala.com");
-            
+
+            bitacoraArchivos(1, ruta, usuario);
 
             foreach (DataRow i in Investigacion.Rows)
             {
@@ -56,7 +70,7 @@ namespace TelefonosScrapt.Funciones
 
                     if (dt.Rows.Count > 0)
                     {
-
+                        
                         if (dt.Rows[0]["Resultado"].ToString() == "0")
                         {
                             while (driver.PageSource.Contains("Teléfonos Guatemala") == false) //Esperar que cargue la pagina
@@ -64,7 +78,7 @@ namespace TelefonosScrapt.Funciones
 
                             }
 
-                            System.Threading.Thread.Sleep(250); //Esperar 5 seg
+                            //System.Threading.Thread.Sleep(250); //Esperar 0.250 seg
 
                             var TextoTelefono = driver.FindElement(By.XPath("//*[@id='telefono']")); //Obtengo la caja de texto de numero
                             var Boton = driver.FindElement(By.XPath("//*[@id='formulario']/div/div[1]/div[2]/input"));//Obtengo el boton de buscar
@@ -81,7 +95,7 @@ namespace TelefonosScrapt.Funciones
                             resultados.Rows[cont]["Compania"] = respuesta; //Ingreso la respuesta a la grid con la data
                             bar.Value = cont;
 
-                           //Ingresó los resultados a base de datos
+                           //Ingreso los resultados a base de datos
                             Variables = new string[5];
                             Valores = new string[5];
 
@@ -121,10 +135,55 @@ namespace TelefonosScrapt.Funciones
             }
             driver.Quit();
             grid.DataSource = resultados;
+            bitacoraArchivos(2, ruta, "");
             bar.Value = bar.Maximum;
-            MessageBox.Show("Investigación terminada", "Teléfonos", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
         }
+
+        private static void bitacoraArchivos(int opcion, string ruta,string usuario)
+        {
+            if (ruta!="")
+            {
+                if (opcion == 1)
+                {
+
+                    //Ingreso a la bitacora de datos
+                    string[] Variables = new string[3];
+                    string[] Valores = new string[3];
+
+                    Variables[0] = "@opcion";
+                    Valores[0] = "3";
+                    Variables[1] = "@ruta";
+                    Valores[1] = ruta;
+                    Variables[2] = "@Usuario";
+                    Valores[2] = usuario;
+
+                    Conexion.ConexionBaseDatos.Consulta("sp_guardarTelefonos", Variables, Valores);
+
+                }
+                else if (opcion == 2)
+                {
+
+                    //Actualizar la fecha final
+                    string[] Variables = new string[2];
+                    string[] Valores = new string[2];
+
+                    Variables[0] = "@opcion";
+                    Valores[0] = "4";
+                    Variables[1] = "@ruta";
+                    Valores[1] = ruta; ;
+
+                    Conexion.ConexionBaseDatos.Consulta("sp_guardarTelefonos", Variables, Valores);
+
+                }
+            }
+
+
+
+
+        } 
+
+
 
         
     }
