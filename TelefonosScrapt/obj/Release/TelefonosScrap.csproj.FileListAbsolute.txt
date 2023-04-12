@@ -22,3 +22,4 @@ C:\Users\ragonzalez\source\repos\TelefonosScrapt\TelefonosScrapt\obj\Release\Tel
 C:\Users\ragonzalez\source\repos\TelefonosScrapt\TelefonosScrapt\obj\Release\Teléfonos.exe
 C:\Users\ragonzalez\source\repos\TelefonosScrapt\TelefonosScrapt\obj\Release\Teléfonos.pdb
 C:\Users\ragonzalez\source\repos\TelefonosScrapt\TelefonosScrapt\obj\Release\TelefonosScrap.csproj.AssemblyReference.cache
+C:\Users\ragonzalez\source\repos\TelefonosScrapt\TelefonosScrapt\obj\Release\TelefonosScrapt.Formularios.FrmSeleccionProcesarArchivo.resources
